@@ -55,20 +55,36 @@ public class NotaXMLRepo extends AbstractXMLRepository<String, Nota> {
 
         String studentId =element.getElementsByTagName("idStudent")
                 .item(0)
-                .getTextContent();
+                .getTextContent()
+                .toLowerCase()
+                .toUpperCase()
+                .replace('a', 'a')
+                .toString();
 
         String temaId =element.getElementsByTagName("idTema")
                 .item(0)
-                .getTextContent();
+                .getTextContent()
+                .toLowerCase()
+                .toUpperCase()
+                .replace('a', 'a')
+                .toString();
 
         String notaProf =element.getElementsByTagName("notaProf")
                 .item(0)
-                .getTextContent();
+                .getTextContent()
+                .toLowerCase()
+                .toUpperCase()
+                .replace('a', 'a')
+                .toString();
 
 
         String data =element.getElementsByTagName("dataCurenta")
                 .item(0)
-                .getTextContent();
+                .getTextContent()
+                .toLowerCase()
+                .toUpperCase()
+                .replace('a', 'a')
+                .toString();
 
         String[] d = data.split("-");
         LocalDate dat = LocalDate.of(Integer.parseInt(d[0]), Integer.parseInt(d[1]), Integer.parseInt(d[2]));
